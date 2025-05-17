@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Maria Hazel Azeneth Biol | Portfolio</title>
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body */
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      background-color: #2C3E50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      margin: 0;
+    }
+
+    /* Navigation Bar */
+    nav {
+      background-color: #2980B9;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+    }
+
+    nav .logo {
+      font-size: 1.8em;
+      color: white;
+      font-weight: bold;
+    }
+
+    nav .menu {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav .menu a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 1.1em;
+    }
+
+    nav .menu a:hover {
+      color: #f39c12;
+    }
+
+    nav .burger {
+      display: none;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      width: 30px;
+      height: 25px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+    }
+
+    nav .burger div {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+    }
+
+    /* Burger Menu Style */
+    .menu.active {
+      display: block;
+      position: absolute;
+      top: 70px;
+      right: 20px;
+      background-color: #132c3d;
+      padding: 20px;
+      border-radius: 8px;
+      width: 200px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .menu a {
+      display: block;
+      margin-bottom: 10px;
+      text-align: center;
+      font-size: 1.2em;
+    }
+
+    /* Sections */
+    section {
+      padding: 40px 20px;
+      margin-top: 30px;
+    }
+
+    section h2 {
+      font-size: 2em;
+      color: #2980B9;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    /* Carousel */
+    .carousel {
+  position: relative;
+  overflow-x: auto;
+  white-space: nowrap;
+  width: 100%;
+  padding: 1rem 0;
+}
+
+.carousel-images {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.carousel-images img {
+  max-height: 200px; /* You can adjust this value */
+  height: auto;
+  width: auto;
+  object-fit: contain;
+  display: inline-block;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1;
+}
+
+.carousel-button-left {
+  left: 0;
+}
+
+.carousel-button-right {
+  right: 0;
+}
+
+
+    /* Niche Sections */
+    .niche-section {
+      background-color: #fff;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    .niche-description {
+      font-size: 1.1em;
+      margin-top: 20px;
+      color: #555;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #2C3E50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: #f39c12;
+      text-decoration: none;
+    }
+    .burger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 30px;
+  height: 25px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 20;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  transition: 0.4s;
+}
+
+/* When menu is active, animate the burger icon into an "X" */
+.burger.active .bar1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.burger.active .bar2 {
+  opacity: 0;
+}
+
+.burger.active .bar3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+.burger.active .bar1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.burger.active .bar2 {
+  opacity: 0;
+}
+
+.burger.active .bar3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+nav {
+  background-color: #1F2937; /* Charcoal Gray */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+}
+
+
+nav .menu a {
+  color: #F9FAFB;
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85em;
+  transition: color 0.3s ease;
+}
+
+nav .menu a:hover {
+  color: #FACC15; /* Soft Gold */
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #F3F4F6; /* Light gray background */
+  color: #111827; /* Very dark gray text */
+}
+
+
+
+    /* Media Queries for responsiveness */
+    @media screen and (max-width: 768px) {
+      nav .menu {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      nav .burger {
+        display: flex;
+      }
+
+      nav .menu.active {
+        display: block;
+      }
+    }
+
+    /* Footer Padding */
+    footer {
+      margin-top: 50px;
+    }
+    .logo img.logo-img {
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+  </style>
+</head>
+<body>
+
+<header>
+   
+<div class="logo">
+  <img src="MHAB Logo.png" alt="Maria Hazel Logo" class="logo-img">
+</div>
+  <h1>Maria Hazel Azeneth Biol | Portfolio</h1>
+</header>
+
+<nav>
+    
+  <div class="menu">
+   <a href="index.html#view-full-portfolio"> Main Page</a>
+    <a href="#email-calendar">Email & Calendar Management</a>
+    <a href="#social-media">Social Media Management</a>
+    <a href="#admin-support">Administrative Support</a>
+    <a href="#workflow">Workflow & Communication</a>
+    <a href="#graphic-design">Graphic Design</a>
+    <a href="#seo">SEO Optimization</a>
+  </div>
+  
+  <button class="burger" onclick="toggleMenu()" id="burger">
+  <div class="bar1"></div>
+  <div class="bar2"></div>
+  <div class="bar3"></div>
+</button>
+
+
+</nav>
+
+<!-- Email & Calendar Management Section -->
+<section id="email-calendar">
+  <h2>Email & Calendar Management</h2>
+  <div class="niche-section">
+    <div class="carousel">
+      <div class="carousel-images">
+        <img src="Pictures/Email Management (2).png" alt="Email Management 1">
+        <img src="Pictures/Email Management.png" alt="Email Management 2">
+        <img src="Email (Before).png" alt="Email Management 2">
+        <img src="Pictures/Calendar Management/Calendar Management (2).png" alt="Email Management 3">
+        <img src="Pictures/Calendar Management/Calendar Management (3).png" alt="Email Management 3">
+        <img src="Pictures/Calendar Management/Calendar Management.png" alt="Email Management 3">
+        
+
+      </div>
+    
+    </div>
+    <p class="niche-description">When your day begins with clarity, everything feels lighter. Here’s how I create that quiet rhythm behind the scenes—ensuring what matters most gets seen, scheduled, and simplified.</p>
+  </div>
+</section>
+
+<!-- Social Media Management Section -->
+<section id="social-media">
+  <h2>Social Media Management</h2>
+  <div class="niche-section">
+    <div class="carousel">
+      <div class="carousel-images">
+       <img src="Pictures/Social Media Management/Social Media Management (2).png" alt="Email Management 1">
+        <img src="Pictures/Social Media Management/Social Media Management (7).png" alt="Email Management 2">
+        <img src="Pictures/Social Media Management/Social Media Management (5).png" alt="Email Management 3">
+        <img src="Pictures/Social Media Management/Social Media Management (9).png" alt="Email Management 3">
+        <img src="Pictures/Social Media Management/Social Media Management (3).png" alt="Email Management 3">
+        <img src="Pictures/Social Media Management/Social Media Management (8).png" alt="Email Management 3">
+        <img src="Pictures/Social Media Management/Social Media Management (6).png" alt="Email Management 3">
+      </div>
+     
+    </div>
+    <p class="niche-description">People don’t just follow content—they follow connection. This section gives a glimpse into how I nurture digital presence with intention, not noise.</p>
+  </div>
+</section>
+
+<!-- Administrative Support Section -->
+<section id="admin-support">
+  <h2>Administrative Support</h2>
+  <div class="niche-section">
+    <div class="carousel">
+      <div class="carousel-images">
+        <img src="Pictures/Admin Task (3) - Copy.png" alt="Admin Support 1">
+        <img src="Pictures/Admin Task (2) - Copy.png" alt="Admin Support 2">
+        <img src="Pictures/Admin Task (4) - Copy.png" alt="Admin Support 3">
+        <img src="Pictures/Admin Task (5) - Copy.png" alt="Admin Support 4">
+        <img src="Pictures/Admin Task (6).png" alt="Admin Support 5">
+        <img src="Pictures/Admin Task 2.png" alt="Admin Support 6">
+        <img src="Pictures/Admin Task 3.png" alt="Admin Support 6">
+        <img src="Pictures/Admin Task 5.png" alt="Admin Support 6">
+        <img src="Pictures/Admin Task 4.png" alt="Admin Support 6">
+
+
+      </div>
+      
+    </div>
+    <p class="niche-description">It’s often the unseen that keeps everything running. These moments show how I bring order, precision, and reliability to the tasks that support the bigger picture.</p>
+  </div>
+</section>
+
+<!-- Workflow & Communication Section -->
+<section id="workflow">
+  <h2>Workflow & Communication</h2>
+  <div class="niche-section">
+    <div class="carousel">
+      <div class="carousel-images">
+        <img src="workflow1.png" alt="Workflow 1">
+        <img src="Workflow4.png" alt="Workflow 2">
+        <img src="workflow2.png" alt="Workflow 3">
+        <img src="workflow3.png" alt="Workflow 3">
+
+      </div>
+      
+    </div>
+    <p class="niche-description">Every team has its own rhythm. Here, I focus on shaping systems and streamlining exchanges so that clarity leads the way—and productivity follows.</p>
+  </div>
+</section>
+
+<!-- Graphic Design Section -->
+<section id="graphic-design">
+  <h2>Graphic Design</h2>
+  <div class="niche-section">
+    <div class="carousel">
+      <div class="carousel-images">
+        <img src="1.png" alt="Graphic Design 1">
+        <img src="7.png" alt="Graphic Design 3">
+        <img src="4.png" alt="Graphic Design 3">
+         <img src="3.png" alt="Graphic Design 2">
+        <img src="5.png" alt="Graphic Design 3">
+        <img src="6.png" alt="Graphic Design 3">
+        <img src="MHAB Logo.png" alt="Graphic Design 3">
+        
+
+      </div>
+      
+    </div>
+    <p class="niche-description">Design isn’t decoration—it’s how a message feels. In this space, I blend visual identity with meaning to make brands more human and memorable.</p>
+  </div>
+</section>
+
+<!-- SEO Optimization Section -->
+<section id="seo">
+  <h2>SEO Optimization</h2>
+  <div class="niche-section">
+    <div class="carousel">
+      <div class="carousel-images">
+        <img src="Optimization.png" alt="SEO Optimization 1">
+        <img src="optimization1.png" alt="SEO Optimization 2">
+        <img src="Optimization2.png" alt="SEO Optimization 3">
+      </div>
+      
+    </div>
+    <p class="niche-description">The best results don’t shout—they’re simply found. This section reveals how I help content rise naturally, by aligning strategy with how people genuinely search.</p>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2025 Maria Hazel Azeneth Biol. All rights reserved. | <a href="mailto:hazelremoteassistant@gmail.com">Contact</a></p>
+</footer>
+
+<script>
+ 
+  function toggleMenu() {
+    const menu = document.querySelector('.menu');
+    const burger = document.getElementById('burger');
+    menu.classList.toggle('active');
+    burger.classList.toggle('active');
+  }
+
+
+  function moveCarousel(direction) {
+    const images = document.querySelectorAll('.carousel-images');
+    const totalImages = images[0].children.length;
+
+    currentIndex += direction;
+    if (currentIndex < 0) {
+      currentIndex = totalImages - 1;
+    } else if (currentIndex >= totalImages) {
+      currentIndex = 0;
+    }
+
+    images[0].style.transform = `translateX(-${currentIndex * (100 + 20)}px)`;
+  }
+</script>
+
+</body>
+</html>
