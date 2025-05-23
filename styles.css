@@ -1439,3 +1439,143 @@ text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
   0% { opacity: 0; }
   100% { opacity: 1; }
 }
+#pricing {
+  background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+  padding: 50px 20px;
+  color: #0b3d91;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  max-width: 900px;
+  margin: 40px auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+#pricing h2 {
+  font-size: 2.4em;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+#pricing .intro-text {
+  font-size: 1.1em;
+  margin-bottom: 30px;
+  color: #1a237e;
+}
+
+.pricing-cards {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-bottom: 35px;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(3, 43, 96, 0.1);
+  padding: 30px 25px;
+  width: 260px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(3, 43, 96, 0.2);
+}
+
+.card.best-value {
+  border: 3px solid #1565c0;
+  box-shadow: 0 15px 40px rgba(21, 101, 192, 0.4);
+}
+
+.card.best-value:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 18px 50px rgba(21, 101, 192, 0.6);
+}
+
+.card h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.badge {
+  background-color: #1565c0;
+  color: white;
+  font-size: 0.75em;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 8px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+.price {
+  font-size: 2.2em;
+  font-weight: 700;
+  color: #0b3d91;
+  margin: 15px 0;
+}
+
+.price span {
+  font-size: 1.1em;
+  color: #395b9e;
+  font-weight: 500;
+}
+
+.desc {
+  font-size: 1em;
+  color: #344a72;
+  line-height: 1.4;
+}
+
+.bonuses {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+  color: #1a237e;
+}
+
+.bonuses h4 {
+  font-size: 1.3em;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.bonuses ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.bonuses ul li {
+  margin-bottom: 10px;
+  font-size: 1em;
+  position: relative;
+  padding-left: 24px;
+  color: #1a237e;
+}
+
+.bonuses ul li::before {
+  content: "✔";
+  color: #1565c0;
+  position: absolute;
+  left: 0;
+  font-weight: 700;
+}
+
+/* Responsive */
+
+@media (max-width: 800px) {
+  .pricing-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+    max-width: 320px;
+  }
+}
